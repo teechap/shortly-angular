@@ -8,14 +8,7 @@ angular.module('shortly.shorten', [])
     return $http({
       method: 'POST',
       url: '/api/links',
-      data: {
-        visits: 0,
-        link: String,
-        title: String,
-        code: String,
-        base_url: www.example.com,
-        url: link
-      }
+      data: {url: link}
     }).
     success(function(data, status, headers, config) {
       // We're not sure what the line immediately below does.
