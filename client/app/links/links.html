@@ -1,6 +1,9 @@
 <div ng-controller="LinksController" id='container'>
   <!-- Your html here -->
-  <ul ng-repeat="link in data.links">
-  {{link.url}}
+  <input ng-model="userFilter"/>
+  <ul class="link" ng-repeat="link in data.links | orderBy:'-visits' | filter:userFilter">
+    <span class="title">{{link.title}}</span>
+    <a ng-href="/api/links/{{link.code}}">localhost:3000/api/links/{{link.code}}</a>
+    <span class="visits"> {{link.visits}}</span>
   </ul>
 </div>
