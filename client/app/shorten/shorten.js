@@ -17,6 +17,7 @@ angular.module('shortly.shorten', [])
       return $scope.link;
     }).
     error(function(data, status, headers, config) {
+      $scope.error = "Not a valid URL";
       console.log("There has been an error", data);
       return data;
     });

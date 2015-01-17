@@ -1,4 +1,7 @@
-<div ng-controller="ShortenController" id='container'>
-  <input type="text" ng-model='shortenInput'/>
+<form name='shortenForm' ng-controller="ShortenController" id='container'>
+  <input type="url" ng-model='shortenInput'/>
   <button ng-click='addLink(shortenInput)'>Add Link</button>
-</div>
+  <span class="error" ng-show="shortenForm.input.$error.url">Invalid URL</span>
+  <span ng-show="error"><br/>{{error}}</span>
+
+</form>
