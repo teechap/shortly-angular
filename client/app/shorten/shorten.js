@@ -2,6 +2,7 @@ angular.module('shortly.shorten', [])
 
 .controller('ShortenController', function ($scope, $location, $http, Links) {
   $scope.link = {};
+  $scope.shortenInput = "http://www.";
 
   $scope.addLink = function(link){
     console.log('link', link);
