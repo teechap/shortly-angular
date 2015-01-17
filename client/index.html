@@ -9,16 +9,16 @@
     <h1>Shortly</h1>
 
     <!-- the ng-view directive is where our templates will be loaded into when naviagted to -->
-    <!-- <nav>
-      <ul ng-controller='NavController'>
-        <li ng-show "#">Home</li>
-        <li ng-show "/signup">Signup</li>
-        <li ng-show "/signin">Sign In</li>
-        <li ng-show "#/shorten">Shorten</li>
-        <li ng-show "/links">Links</li>
+    <nav class="navigation">
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/#/signup">Signup</a></li>
+        <li><a href="/#/signin">Sign In</a></li>
+        <li><a href="/#/shorten">Shorten</a></li>
+        <li><a href="/#/links">Links</a></li>
       </ul>
     </nav>
-    -->
+
     <div ng-view></div>
 
     <script src="lib/angular/angular.js"></script>
